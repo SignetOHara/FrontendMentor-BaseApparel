@@ -6,10 +6,10 @@ body {
 }
 
 .logo {
-  margin: 1rem;
+  padding: 1.5rem;
 }
 .logo img {
-  width: 3rem;
+  width: 33%;
 }
 
 .image-container {
@@ -23,7 +23,29 @@ body {
 
 .text-container h1 {
   color: #ce9797;
+  font-size: 2.5rem;
   font-weight: 300;
+  margin: 3.75rem 0 0;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.text-container h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 auto;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 80%;
+}
+.text-container p {
+  color: #ce9797;
+  font-size: 0.875rem;
+  line-height: 20px;
+  margin: 1.5rem auto;
+  text-align: center;
+  width: 80%;
 }
 
 .form__email--arrow {
