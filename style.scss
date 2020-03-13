@@ -17,31 +17,54 @@ body {
 // LOGO
 
 .logo {
-	margin: 1rem;
+	margin: 1.5rem;
 
 	img {
-		width: 33%
+		width: 33%;
 	}
 }
 
 // IMAGE
 
 .image-container {
-	img {
-		width: 100vw;
-	}
+	background: url('images/hero-mobile.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 38vh;
 }
 
 // MAIN CONTENT
 
+
+
 .text-container {
 	h1 {
 		color: map-get($colors, font);
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 		font-weight: 300;
+		margin: 3.75rem 0 0;
+		letter-spacing: 9px;
 		text-transform: uppercase;
 		text-align: center;
+	}
 
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 600;
+		margin: 0 auto;
+		letter-spacing: 6px;
+		text-transform: uppercase;
+		text-align: center;
+		width: 80%;
+	}
+
+	p {
+		color: map-get($colors, font);
+		font-size: 0.875rem;
+		line-height: 20px;
+		margin: 1.5rem auto;
+		text-align: center;
+		width: 80%;
 	}
 }
 
