@@ -12,8 +12,13 @@ body {
   width: 3rem;
 }
 
+.image-container {
+  display: inline-block;
+  width: 100%;
+}
 .image-container img {
-  width: 100vw;
+  width: 100%;
+  vertical-align: top;
 }
 
 .text-container h1 {
