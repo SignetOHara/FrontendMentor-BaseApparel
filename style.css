@@ -6,17 +6,19 @@ body {
 }
 
 .logo {
-  margin: 1.5rem;
+  padding: 1.5rem;
 }
 .logo img {
   width: 33%;
 }
 
 .image-container {
-  background: url("images/hero-mobile.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 38vh;
+  display: inline-block;
+  width: 100%;
+}
+.image-container img {
+  width: 100%;
+  vertical-align: top;
 }
 
 .text-container h1 {
