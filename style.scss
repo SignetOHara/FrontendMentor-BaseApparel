@@ -73,16 +73,45 @@ body {
 		color: map-get($colors, font);
 		font-size: 0.875rem;
 		line-height: 20px;
-		margin: 1.5rem auto;
+		margin: 1.5rem auto 2.5rem;
 		text-align: center;
 		width: 80%;
 	}
 }
 
 // FORM
+
+.form__email--container {
+	margin: 0 auto 2rem;
+	position: flex;
+	text-align: center;
+}
+
+.form__email--text-field {
+	background-color: transparent;
+	border: 1px solid hsl(0, 36%, 70%);
+	border-radius: 25px;
+	font-family: inherit;
+	font-size: 0.875rem;
+	opacity: 0.5;
+	padding: 1rem 1rem;
+	vertical-align: middle;
+	
+	&::placeholder {
+		color: map-get($colors, font);
+		opacity: 0.7;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
 .form__email--arrow {
 	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-	border-radius: 100%;
+	border-radius: 25px;
+	padding: 1rem 1.7rem;
+	vertical-align: middle;
 }
 
 // *** - REMEMBER TO INCLUDE ERROR SVG ICON - POSSIBLY USE SIMILAR TO FOLLOWING CODE:   input:required:invalid, input:focus:invalid {

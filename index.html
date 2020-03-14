@@ -39,24 +39,24 @@
 					</p>
 				</div>
 
-				<!-- *** Need to complete action attribute, once uploaded onto the web, use it's own url then check on html validator -->
-				<form action="" method="POST" class="form__email">
+				<form action="index.html" method="POST" class="form__email">
 					<div class="form__email--container">
-						<!-- For accessibility maybe create a label element for the email then hide it, https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form -->
-						<input
-							class="form__email--text-field"
-							type="email"
-							name="email"
-							id="email"
-							placeholder="Email Address"
-							required
-						/>
-						<input
-							class="form__email--arrow"
-							type="image"
-							src="images/icon-arrow.svg"
-							alt="arrow svg"
-						/>
+						<label for="email">
+							<input
+								class="form__email--text-field"
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Email Address"
+								required
+							/>
+							<input
+								class="form__email--arrow"
+								type="image"
+								src="images/icon-arrow.svg"
+								alt="arrow svg"
+							/>
+						</label>
 					</div>
 				</form>
 
