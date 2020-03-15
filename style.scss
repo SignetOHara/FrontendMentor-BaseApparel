@@ -10,14 +10,19 @@ $colors: (
 
 html {
 	font-size: 100%;
+	height: 100%;
 }
 
 body {
 	font-family: 'Josefin Sans', sans-serif;
+	height: 100%;
 	margin: 0;
 	box-sizing: border-box;
 }
 
+main {
+	height: 100%;
+}
 // LOGO
 
 .logo {
@@ -45,6 +50,8 @@ body {
 
 .background-area {
 	background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	height: 100%;
+	max-height: 565px;
 }
 
 .text-container {
@@ -82,21 +89,30 @@ body {
 // FORM
 
 .form__email--container {
+	border: 1px solid hsla(0, 36%, 70%, 0.507);
+	border-radius: 25px;
+	border-width: thin;
+	display: flex;
 	margin: 0 auto 2rem;
-	position: flex;
-	text-align: center;
+	text-align-last: justify;
+	width: 80%;
+
+	label {
+		width: 100%;
+	}
 }
 
 .form__email--text-field {
 	background-color: transparent;
-	border: 1px solid hsl(0, 36%, 70%);
-	border-radius: 25px;
+	border: none;
+	flex-grow: 2;
 	font-family: inherit;
 	font-size: 0.875rem;
+	height: 100%;
 	opacity: 0.5;
-	padding: 1rem 1rem;
-	vertical-align: middle;
-	width: 70%;
+	padding-left: 1rem;
+	// vertical-align: middle;
+	width: 65%;
 	
 	&::placeholder {
 		color: map-get($colors, font);
@@ -116,9 +132,8 @@ body {
 	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 	border-radius: 25px;
 	opacity: 0.9;
-	padding: 1rem 1.7rem;
-	position: absolute;
-	vertical-align: middle;
+	padding: 0.8rem 1.5rem;
+	vertical-align: top;
 
 	&:hover {
 		opacity: 1;
@@ -136,6 +151,7 @@ body {
 
 .attribution {
 	font-size: 11px;
+	margin-top: 10rem;
 	text-align: center;
 }
 .attribution a {
