@@ -72,6 +72,7 @@ body {
   opacity: 0.5;
   padding: 1rem 1rem;
   vertical-align: middle;
+  width: 70%;
 }
 .form__email--text-field::placeholder {
   color: #ce9797;
@@ -80,12 +81,20 @@ body {
 .form__email--text-field:focus {
   outline: none;
 }
+.form__email--text-field:hover {
+  opacity: 1;
+}
 
 .form__email--arrow {
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border-radius: 25px;
+  opacity: 0.9;
   padding: 1rem 1.7rem;
+  position: absolute;
   vertical-align: middle;
+}
+.form__email--arrow:hover {
+  opacity: 1;
 }
 
 .attribution {

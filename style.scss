@@ -96,6 +96,7 @@ body {
 	opacity: 0.5;
 	padding: 1rem 1rem;
 	vertical-align: middle;
+	width: 70%;
 	
 	&::placeholder {
 		color: map-get($colors, font);
@@ -105,13 +106,23 @@ body {
 	&:focus {
 		outline: none;
 	}
+
+	&:hover {
+		opacity: 1;
+	}
 }
 
 .form__email--arrow {
 	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 	border-radius: 25px;
+	opacity: 0.9;
 	padding: 1rem 1.7rem;
+	position: absolute;
 	vertical-align: middle;
+
+	&:hover {
+		opacity: 1;
+	}
 }
 
 // *** - REMEMBER TO INCLUDE ERROR SVG ICON - POSSIBLY USE SIMILAR TO FOLLOWING CODE:   input:required:invalid, input:focus:invalid {
