@@ -67,9 +67,8 @@ main {
 }
 
 .form__email--container {
-  border: 1px solid rgba(206, 151, 151, 0.507);
+  border: thin solid rgba(206, 151, 151, 0.507);
   border-radius: 25px;
-  border-width: thin;
   display: flex;
   margin: 0 auto 2rem;
   padding-left: 1rem;
@@ -112,21 +111,21 @@ main {
   color: red;
   font-family: inherit;
   font-size: 0.875rem;
-  margin: 0;
+  margin: 0 0 0 12%;
   position: relative;
-  text-align: center;
   visibility: hidden;
 }
 
 .form__email--arrow {
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border-radius: 25px;
-  opacity: 0.9;
   padding: 0.8rem 1.5rem;
   vertical-align: top;
+  z-index: 2;
 }
 .form__email--arrow:hover {
-  opacity: 1;
+  background: #f8bfbf;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.274);
 }
 
 .attribution {
