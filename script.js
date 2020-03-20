@@ -10,7 +10,7 @@ function validate() {
 	} else {
     errorMsg.style.visibility = "visible";
     inputMail.classList.add('error');
-    mailContainer.style.border = "medium solid red";
+		mailContainer.style.border = "medium solid red";
 	}
 }
 

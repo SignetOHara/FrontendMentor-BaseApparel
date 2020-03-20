@@ -1,96 +1,76 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
-
-// VARIABLES
-
-$colors: (
-	font: hsl(0, 36%, 70%)
-);
-
-// GENERAL BODY
-
 html {
 	font-size: 100%;
-	height: 100%;
 }
 
 body {
+	background: linear-gradient(135deg, white, #fff5f5);
 	font-family: 'Josefin Sans', sans-serif;
-	height: 100%;
 	margin: 0;
 	box-sizing: border-box;
+	position: relative;
 }
 
 main {
 	height: 100%;
 }
-// LOGO
 
 .logo {
 	padding: 1.5rem;
-
-	img {
-		width: 33%;
-	}
 }
 
-// IMAGE
+.logo img {
+	width: 33%;
+}
 
 .image-container {
-
 	display: inline-block;
 	width: 100%;
-
-	img {
-		width: 100%;
-		vertical-align: top;
-	}
 }
 
-// MAIN CONTENT
-
-.background-area {
-	background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-	height: 100vh;
-	max-height: 565px;
-	position: relative;
+.image-container img {
+	width: 100%;
+	vertical-align: top;
 }
 
-.text-container {
-	h1 {
-		color: map-get($colors, font);
-		font-size: 2.5rem;
-		font-weight: 300;
-		letter-spacing: 9px;
-		margin: 0;
-		padding: 3.75rem 0 0;
-		text-transform: uppercase;
-		text-align: center;
-	}
+// .background-area {
+// 	height: 100vh;
+// 	max-height: 565px;
+// 	position: relative;
+// }
 
-	h2 {
-		font-size: 2.5rem;
-		font-weight: 600;
-		margin: 0 auto;
-		letter-spacing: 6px;
-		text-transform: uppercase;
-		text-align: center;
-		width: 80%;
-	}
-
-	p {
-		color: map-get($colors, font);
-		font-size: 0.875rem;
-		line-height: 20px;
-		margin: 1.5rem auto 2.5rem;
-		text-align: center;
-		width: 80%;
-	}
+.text-container h1 {
+	color: #ce9797;
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 9px;
+	margin: 0;
+	padding: 3.75rem 0 0;
+	text-transform: uppercase;
+	text-align: center;
 }
 
-// FORM
+.text-container h2 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin: 0 auto;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 80%;
+}
+
+.text-container p {
+	color: #ce9797;
+	font-size: 0.875rem;
+	line-height: 20px;
+	margin: 1.5rem auto 2.5rem;
+	text-align: center;
+	width: 80%;
+}
 
 .form__email--container {
-	border: thin solid hsla(0, 36%, 70%, 0.507);
+	border: thin solid rgba(206, 151, 151, 0.507);
 	border-radius: 25px;
 	display: flex;
 	margin: 0 auto 2rem;
@@ -98,19 +78,20 @@ main {
 	justify-content: space-between;
 	text-align-last: justify;
 	width: 80%;
-
-	.error {
-		background-image: url(images/icon-error.svg);
-		background-position: 90%;
-		background-repeat: no-repeat;
-		margin-right: 1rem;
 }
 
-#email-label {
-	width: 100%
+.form__email--container .error {
+	background-image: url(images/icon-error.svg);
+	background-position: 90%;
+	background-repeat: no-repeat;
+	margin-right: 1rem;
 }
 
-.form__email--text-field {
+.form__email--container #email-label {
+	width: 100%;
+}
+
+.form__email--container .form__email--text-field {
 	background-color: transparent;
 	border: none;
 	flex-grow: 2;
@@ -119,21 +100,19 @@ main {
 	height: 100%;
 	opacity: 0.5;
 	width: 100%;
-	
-	&::placeholder {
-		color: map-get($colors, font);
-		opacity: 0.7;
-	}
+}
 
-	&:focus {
-		outline: none;
-	}
+.form__email--container .form__email--text-field::placeholder {
+	color: #ce9797;
+	opacity: 0.7;
+}
 
-	&:hover {
-		opacity: 1;
-	}
-	}
+.form__email--container .form__email--text-field:focus {
+	outline: none;
+}
 
+.form__email--container .form__email--text-field:hover {
+	opacity: 1;
 }
 
 .form__email--errorMsg {
@@ -147,25 +126,33 @@ main {
 }
 
 .form__email--arrow {
-	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
 	border-radius: 25px;
 	padding: 0.8rem 1.5rem;
 	vertical-align: top;
 	z-index: 2;
-
-	&:hover {
-		background: hsl(0, 80%, 86%);
-		box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.274);
-	}
 }
 
-// FOOTER
+.form__email--arrow:hover {
+	background: #f8bfbf;
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.274);
+}
 
 .attribution {
 	font-size: 11px;
 	margin-top: 2.5rem;
 	text-align: center;
 }
+
 .attribution a {
-	color: hsl(228, 45%, 44%);
+	color: #3e52a3;
 }
+
+@media (min-width: 40rem) {
+	.main-content {
+		display: grid;
+		
+	}
+}
+
+/*# sourceMappingURL=style.scss.map */
