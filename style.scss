@@ -1,76 +1,91 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+//VARIABLES
+
+$colors: (
+	mobile-background-gradient: linear-gradient(135deg, white, #fff5f5),
+	arrow-gradient: linear-gradient(135deg, #f8bfbf, #ee8c8c),
+	soft-red: hsl(0, 93%, 68%),
+	desaturated-red: hsl(0, 36%, 70%),
+	input-field-border: hsla(0, 36%, 70%, 0.506),
+	dark-grayish-red: #413a3a
+);
+
+//HTML AND BODY TAGS
+
 html {
 	font-size: 100%;
 }
 
 body {
-	background: linear-gradient(135deg, white, #fff5f5);
-	font-family: 'Josefin Sans', sans-serif;
 	margin: 0;
+	background: map-get($colors, mobile-background-gradient);
+	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
 	position: relative;
 }
 
-main {
-	height: 100%;
-}
+//MAIN CONTENT
 
-.logo {
+// Logo
+
+.logo-container {
 	padding: 1.5rem;
+
+	img {
+		width: 33%;
+	}
 }
 
-.logo img {
-	width: 33%;
-}
+// Image
 
 .image-container {
 	display: inline-block;
 	width: 100%;
+
+	img {
+		width: 100%;
+	}
 }
 
-.image-container img {
-	width: 100%;
-	vertical-align: top;
+// Text
+
+.text-container {
+	h1 {
+		color: map-get($colors, desaturated-red);
+		font-size: 2.5rem;
+		font-weight: 300;
+		letter-spacing: 9px;
+		margin: 0;
+		padding: 3.75rem 0 0;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 600;
+		margin: 0 auto;
+		letter-spacing: 6px;
+		text-transform: uppercase;
+		text-align: center;
+		width: 80%;
+	}
+
+	p {
+		color: map-get($colors, desaturated-red);
+		font-size: 0.875rem;
+		line-height: 20px;
+		margin: 1.5rem auto 2.5rem;
+		text-align: center;
+		width: 80%;
+	}
 }
 
-// .background-area {
-// 	height: 100vh;
-// 	max-height: 565px;
-// 	position: relative;
-// }
-
-.text-container h1 {
-	color: #ce9797;
-	font-size: 2.5rem;
-	font-weight: 300;
-	letter-spacing: 9px;
-	margin: 0;
-	padding: 3.75rem 0 0;
-	text-transform: uppercase;
-	text-align: center;
-}
-
-.text-container h2 {
-	font-size: 2.5rem;
-	font-weight: 600;
-	margin: 0 auto;
-	letter-spacing: 6px;
-	text-transform: uppercase;
-	text-align: center;
-	width: 80%;
-}
-
-.text-container p {
-	color: #ce9797;
-	font-size: 0.875rem;
-	line-height: 20px;
-	margin: 1.5rem auto 2.5rem;
-	text-align: center;
-	width: 80%;
-}
+// Form
 
 .form__email--container {
-	border: thin solid rgba(206, 151, 151, 0.507);
+	border: thin solid map-get($colors, input-field-border);
 	border-radius: 25px;
 	display: flex;
 	margin: 0 auto 2rem;
@@ -78,46 +93,46 @@ main {
 	justify-content: space-between;
 	text-align-last: justify;
 	width: 80%;
-}
 
-.form__email--container .error {
-	background-image: url(images/icon-error.svg);
-	background-position: 90%;
-	background-repeat: no-repeat;
-	margin-right: 1rem;
-}
+	.error {
+		background-image: url(images/icon-error.svg);
+		background-position: 90%;
+		background-repeat: no-repeat;
+		margin-right: 1rem;
+	}
 
-.form__email--container #email-label {
-	width: 100%;
-}
+	#email-label {
+		width: 100%;
+	}
 
-.form__email--container .form__email--text-field {
-	background-color: transparent;
-	border: none;
-	flex-grow: 2;
-	font-family: inherit;
-	font-size: 0.875rem;
-	height: 100%;
-	opacity: 0.5;
-	width: 100%;
-}
+	.form__email--text-field {
+		background-color: transparent;
+		border: none;
+		flex-grow: 2;
+		font-family: inherit;
+		font-size: 0.875rem;
+		height: 100%;
+		opacity: 0.5;
+		width: 100%;
+	}
 
-.form__email--container .form__email--text-field::placeholder {
-	color: #ce9797;
-	opacity: 0.7;
-}
+	.form__email--text-field::placeholder {
+		color: map-get($colors, desaturated-red);
+		opacity: 0.7;
+	}
 
-.form__email--container .form__email--text-field:focus {
-	outline: none;
-}
+	.form__email--text-field:focus {
+		outline: none;
+	}
 
-.form__email--container .form__email--text-field:hover {
-	opacity: 1;
+	.form__email--text-field:hover {
+		opacity: 1;
+	}
 }
 
 .form__email--errorMsg {
 	bottom: 1rem;
-	color: red;
+	color: map-get($colors, soft-red);
 	font-family: inherit;
 	font-size: 0.875rem;
 	margin: 0 0 0 12%;
@@ -126,7 +141,7 @@ main {
 }
 
 .form__email--arrow {
-	background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+	background: map-get($colors, arrow-gradient);
 	border-radius: 25px;
 	padding: 0.8rem 1.5rem;
 	vertical-align: top;
@@ -138,9 +153,12 @@ main {
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.274);
 }
 
+// FOOTER
+
 .attribution {
 	font-size: 11px;
-	margin-top: 2.5rem;
+	margin: 2.5rem 0 0 0;
+	padding-bottom: 2rem;
 	text-align: center;
 }
 
@@ -148,11 +166,10 @@ main {
 	color: #3e52a3;
 }
 
+// MEDIA QUERIES
+
 @media (min-width: 40rem) {
-	.main-content {
-		display: grid;
-		
-	}
+
 }
 
 /*# sourceMappingURL=style.scss.map */
