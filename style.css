@@ -93,6 +93,20 @@ body {
 .form__email--container .form__email--text-field:required {
   outline: none;
 }
+.form__email--container .form__email--arrow {
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  vertical-align: top;
+  z-index: 2;
+}
+.form__email--container .form__email--arrow:hover {
+  background: #f8bfbf;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.274);
+}
+.form__email--container .form__email--arrow:focus {
+  outline: none;
+}
 
 .form__email--errorMsg {
   bottom: 1rem;
@@ -102,21 +116,6 @@ body {
   margin: 0 0 0 12%;
   position: relative;
   visibility: hidden;
-}
-
-.form__email--arrow {
-  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  border-radius: 25px;
-  padding: 0.8rem 1.5rem;
-  vertical-align: top;
-  z-index: 2;
-}
-.form__email--arrow:hover {
-  background: #f8bfbf;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.274);
-}
-.form__email--arrow:focus {
-  outline: none;
 }
 
 .attribution {
@@ -215,7 +214,7 @@ body {
   }
 
   .attribution {
-    margin-left: 15%;
+    margin-left: 20%;
     text-align: left;
   }
 }

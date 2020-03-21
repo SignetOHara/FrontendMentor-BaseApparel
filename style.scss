@@ -112,23 +112,40 @@ body {
 		height: 100%;
 		opacity: 0.5;
 		width: 100%;
+
+		&::placeholder {
+			color: map-get($colors, desaturated-red);
+			opacity: 0.7;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:required {
+			outline: none;
+		}
 	}
 
-	.form__email--text-field::placeholder {
-		color: map-get($colors, desaturated-red);
-		opacity: 0.7;
-	}
+	.form__email--arrow {
+		background: map-get($colors, arrow-gradient);
+		border-radius: 25px;
+		padding: 0.8rem 1.5rem;
+		vertical-align: top;
+		z-index: 2;
 
-	.form__email--text-field:focus {
-		outline: none;
-	}
+		&:hover {
+			background: #f8bfbf;
+			box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.274);
+		}
 
-	.form__email--text-field:hover {
-		opacity: 1;
-	}
-
-	.form__email--text-field:required {
-		outline: none;
+		&:focus {
+			outline: none;
+		}
 	}
 }
 
@@ -140,23 +157,6 @@ body {
 	margin: 0 0 0 12%;
 	position: relative;
 	visibility: hidden;
-}
-
-.form__email--arrow {
-	background: map-get($colors, arrow-gradient);
-	border-radius: 25px;
-	padding: 0.8rem 1.5rem;
-	vertical-align: top;
-	z-index: 2;
-
-	&:hover {
-		background: #f8bfbf;
-		box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.274);
-	}
-
-	&:focus {
-		outline: none;
-	}
 }
 
 // FOOTER
@@ -265,7 +265,7 @@ body {
 	}
 
 	.attribution {
-		margin-left: 15%;
+		margin-left: 20%;
 		text-align: left;
 	}
 }
